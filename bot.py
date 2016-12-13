@@ -2,7 +2,7 @@ from  telegram.ext import Updater,CommandHandler, MessageHandler, Filters
 
 def greet_user(bot, update):
 	print("Вызван /start")
-	bot.sendMessage(update.message.chat_id, text="Как дела!")
+	bot.sendMessage(update.message.chat_id, text="Как твои дела!")
 	
 def show_error(bot, update, error):
 	print('Update "{}" caused error "{}"'.format(update, error))
