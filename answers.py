@@ -1,7 +1,7 @@
 di = {"привет": "И тебе привет!", "как дела": "Лучше всех", "пока": "Увидемся"}
 
 def get_answer(k,d):
-	return d[k]
+	return d[k.lower()]
 
-value = get_answer("как дела", di)
+value = get_answer("ПОКА", di)
 print(value)
