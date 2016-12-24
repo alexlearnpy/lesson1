@@ -9,20 +9,19 @@ def show_error(bot, update, error):
 
 def talk_to_me(bot, update):
 	print("Пришло сообщение: {}".format(update.message.text))
-	bot.sendMessage(update.message.chat_id, update.message.text)
+	bot.sendMessage(update.message.chat_id, get_answer(update.message.text))
 
 def count_words(bot, update):
 	print(update.message.text.split(' '))
 	bot.sendMessage(update.message.chat_id, text = update.message.text.split)
 	len(update.message.text)
 	
-di = {"привет": "И тебе привет!", "как дела": "Лучше всех", "пока": "Увидемся"}
+answers = {"привет": "И тебе привет!", "как дела": "Лучше всех", "пока": "Увидемся"}
 
-def get_answer(k,d):
-	return d[k]
-
-value = get_answer("как дела", di)
-print(value)
+def get_answer(question):
+	answer = answers.get(question, 'Я не понял.')
+	return answer
+	
 
        
 

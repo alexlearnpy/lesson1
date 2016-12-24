@@ -1,3 +1,2 @@
-print("Hello world")
-
-print('4')
+name = 'Alex'
+print(name)
