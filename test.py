@@ -1,7 +1,7 @@
-while True:
-	user_say = input('Скажи что-нибудь:')
-	if user_say: == 'Пока':
-		print('Ну пока')
-		break
-	else:
-		print('Сам ты {}'.format(user_say))
+a = ['sk', '+', '3', '=']
+
+if a[0].isdigit() == False or a[2].isdigit() == False:
+    print("ошибка")
+
+else: 
+    print("ok")
